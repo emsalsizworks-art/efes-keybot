@@ -47,6 +47,7 @@ const server = createServer(async (req, res) => {
         return;
     }
 
+    if (req.url === '/') return json(res, { status: 'ok', message: 'EFES API is running' });
     res.writeHead(404).end();
 });
 
