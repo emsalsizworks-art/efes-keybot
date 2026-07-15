@@ -56,5 +56,7 @@ function json(res, data) {
     res.end(JSON.stringify(data));
 }
 
-const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => console.log(`listening on port ${PORT}`));
+export function startServer() {
+    const PORT = process.env.PORT || 3000;
+    server.listen(PORT, () => console.log(`listening on port ${PORT}`));
+}

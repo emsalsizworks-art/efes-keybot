@@ -3,7 +3,7 @@ import { readFileSync, existsSync } from 'fs';
 import { initDb } from './db.js';
 import { execute as pingExecute } from './commands/ping.js';
 import { execute as keyExecute } from './commands/key.js';
-import './server.js';
+import { startServer } from './server.js';
 
 let config;
 if (process.env.TOKEN) {
@@ -13,6 +13,7 @@ if (process.env.TOKEN) {
 }
 
 await initDb();
+startServer();
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
