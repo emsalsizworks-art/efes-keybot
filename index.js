@@ -39,4 +39,4 @@ client.on('interactionCreate', async interaction => {
     }
 });
 
-await client.login(config.token);
+client.login(config.token).catch(e => console.error('❌ Discord login failed:', e.message));

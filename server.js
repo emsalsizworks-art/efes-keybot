@@ -56,4 +56,4 @@ function json(res, data) {
 }
 
 const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => console.log(`✅ Verify API çalışıyor: http://localhost:${PORT}`));
+server.listen(PORT, '0.0.0.0', () => console.log(`✅ Verify API çalışıyor: http://0.0.0.0:${PORT}`));
